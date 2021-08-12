@@ -38,10 +38,10 @@ class ColExpanded extends StatelessWidget {
     );
     flex ??= List.filled(children.length, 1);
     int index = 0;
-    children = children.map((e) {
+    _children = children.map((e) {
       return Expanded(
         child: e,
-        flex: index++,
+        flex: flex![index++],
       );
     }).toList(growable: false);
   }
