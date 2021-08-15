@@ -13,7 +13,7 @@ void customLog(
   StackTrace? stackTrace,
   bool onlyInDebug = true,
 }) {
-  if (kReleaseMode && onlyInDebug)
+  if (!kReleaseMode && onlyInDebug)
     log(
       message?.toString() ?? "Null Value",
       error: error,
