@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 
-class CustomFutureBuilder extends StatelessWidget {
+class CustomFutureBuilder<T, E extends Exception> extends StatelessWidget {
   const CustomFutureBuilder({
     Key? key,
     required this.future,
     required this.builder,
-    this.errorBuilder,
+    required this.errorBuilder,
     required this.loading,
+    this.initialData,
   }) : super(key: key);
 
-  final Future future;
-  final Widget Function(AsyncSnapshot) builder;
-  final Widget Function(AsyncSnapshot)? errorBuilder;
+  final T? initialData;
+  final Future<T> future;
+  final Widget Function(AsyncSnapshot<T>) builder;
+  final Widget Function(E?) errorBuilder;
   final Widget loading;
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
+    return FutureBuilder<T>(
+      initialData: initialData,
       future: future,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<T> snapshot) {
         if (snapshot.hasError) {
-          return errorBuilder != null
-              ? errorBuilder!(snapshot)
-              : Center(child: Text("Error"));
+          return errorBuilder(snapshot.error as E?);
         }
         if (snapshot.hasData) {
           return builder(snapshot);
