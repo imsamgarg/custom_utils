@@ -39,7 +39,7 @@ class ValidatorMixin {
     return null;
   }
 
-  String? nameValidator(String? _value, [bool numbersAllowed = false]) {
+  String? nameValidator(String? _value, {bool numbersAllowed = false}) {
     final String value = _trimmedString(_value);
     if (value.isEmpty) return "Please Enter Name";
     if (!value.isAlphabetOnly && !numbersAllowed) {
