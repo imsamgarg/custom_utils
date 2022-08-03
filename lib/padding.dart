@@ -56,10 +56,10 @@ class CustomPadding extends StatelessWidget {
   final EdgeInsets p;
 
   const CustomPadding({
-    Key? key,
+    super.key,
     required this.p,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -68,126 +68,102 @@ class CustomPadding extends StatelessWidget {
 }
 
 class Padding4 extends CustomPadding {
-  const Padding4({Key? key, required Widget child})
-      : super(key: key, child: child, p: p4);
+  const Padding4({super.key, required super.child}) : super(p: p4);
 }
 
 class Padding8 extends CustomPadding {
-  const Padding8({Key? key, required Widget child})
-      : super(key: key, child: child, p: p8);
+  const Padding8({super.key, required super.child}) : super(p: p8);
 }
 
 class Padding12 extends CustomPadding {
-  const Padding12({Key? key, required Widget child})
-      : super(key: key, child: child, p: p12);
+  const Padding12({super.key, required super.child}) : super(p: p12);
 }
 
 class Padding16 extends CustomPadding {
-  const Padding16({Key? key, required Widget child})
-      : super(key: key, child: child, p: p16);
+  const Padding16({super.key, required super.child}) : super(p: p16);
 }
 
 class Padding20 extends CustomPadding {
-  const Padding20({Key? key, required Widget child})
-      : super(key: key, child: child, p: p20);
+  const Padding20({super.key, required super.child}) : super(p: p20);
 }
 
 class Padding24 extends CustomPadding {
-  const Padding24({Key? key, required Widget child})
-      : super(key: key, child: child, p: p24);
+  const Padding24({super.key, required super.child}) : super(p: p24);
 }
 
 class Padding28 extends CustomPadding {
-  const Padding28({Key? key, required Widget child})
-      : super(key: key, child: child, p: p28);
+  const Padding28({super.key, required super.child}) : super(p: p28);
 }
 
 class Padding32 extends CustomPadding {
-  const Padding32({Key? key, required Widget child})
-      : super(key: key, child: child, p: p32);
+  const Padding32({super.key, required super.child}) : super(p: p32);
 }
 
 /// Checks//
 ///
 /// Horizontal
 class PaddingX4 extends CustomPadding {
-  const PaddingX4({Key? key, required Widget child})
-      : super(key: key, child: child, p: px4);
+  const PaddingX4({super.key, required super.child}) : super(p: px4);
 }
 
 class PaddingX8 extends CustomPadding {
-  const PaddingX8({Key? key, required Widget child})
-      : super(key: key, child: child, p: px8);
+  const PaddingX8({super.key, required super.child}) : super(p: px8);
 }
 
 class PaddingX12 extends CustomPadding {
-  const PaddingX12({Key? key, required Widget child})
-      : super(key: key, child: child, p: px12);
+  const PaddingX12({super.key, required super.child}) : super(p: px12);
 }
 
 class PaddingX16 extends CustomPadding {
-  const PaddingX16({Key? key, required Widget child})
-      : super(key: key, child: child, p: px16);
+  const PaddingX16({super.key, required super.child}) : super(p: px16);
 }
 
 class PaddingX20 extends CustomPadding {
-  const PaddingX20({Key? key, required Widget child})
-      : super(key: key, child: child, p: px20);
+  const PaddingX20({super.key, required super.child}) : super(p: px20);
 }
 
 class PaddingX24 extends CustomPadding {
-  const PaddingX24({Key? key, required Widget child})
-      : super(key: key, child: child, p: px24);
+  const PaddingX24({super.key, required super.child}) : super(p: px24);
 }
 
 class PaddingX28 extends CustomPadding {
-  const PaddingX28({Key? key, required Widget child})
-      : super(key: key, child: child, p: px28);
+  const PaddingX28({super.key, required super.child}) : super(p: px28);
 }
 
 class PaddingX32 extends CustomPadding {
-  const PaddingX32({Key? key, required Widget child})
-      : super(key: key, child: child, p: px32);
+  const PaddingX32({super.key, required super.child}) : super(p: px32);
 }
 
 ///
 /// //Vertical
 class PaddingY4 extends CustomPadding {
-  const PaddingY4({Key? key, required Widget child})
-      : super(key: key, child: child, p: py4);
+  const PaddingY4({super.key, required super.child}) : super(p: py4);
 }
 
 class PaddingY8 extends CustomPadding {
-  const PaddingY8({Key? key, required Widget child})
-      : super(key: key, child: child, p: py8);
+  const PaddingY8({super.key, required super.child}) : super(p: py8);
 }
 
 class PaddingY12 extends CustomPadding {
-  const PaddingY12({Key? key, required Widget child})
-      : super(key: key, child: child, p: py12);
+  const PaddingY12({super.key, required super.child}) : super(p: py12);
 }
 
 class PaddingY16 extends CustomPadding {
-  const PaddingY16({Key? key, required Widget child})
-      : super(key: key, child: child, p: py16);
+  const PaddingY16({super.key, required super.child}) : super(p: py16);
 }
 
 class PaddingY20 extends CustomPadding {
-  const PaddingY20({Key? key, required Widget child})
-      : super(key: key, child: child, p: py20);
+  const PaddingY20({super.key, required super.child}) : super(p: py20);
 }
 
 class PaddingY24 extends CustomPadding {
-  const PaddingY24({Key? key, required Widget child})
-      : super(key: key, child: child, p: py24);
+  const PaddingY24({super.key, required super.child}) : super(p: py24);
 }
 
 class PaddingY28 extends CustomPadding {
-  const PaddingY28({Key? key, required Widget child})
-      : super(key: key, child: child, p: py28);
+  const PaddingY28({super.key, required super.child}) : super(p: py28);
 }
 
 class PaddingY32 extends CustomPadding {
-  const PaddingY32({Key? key, required Widget child})
-      : super(key: key, child: child, p: py32);
+  const PaddingY32({super.key, required super.child}) : super(p: py32);
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-const Widget kEmptyWidget = SizedBox.shrink();
+const kEmptyWidget = SizedBox.shrink();
 const kCircleBorder = CircleBorder();
 
 class FullWidthBox extends StatelessWidget {
-  const FullWidthBox({Key? key, this.child}) : super(key: key);
+  const FullWidthBox({super.key, this.child});
 
   final Widget? child;
   @override
@@ -18,9 +18,9 @@ class FullWidthBox extends StatelessWidget {
 
 class WhiteContainer extends StatelessWidget {
   const WhiteContainer({
-    Key? key,
+    super.key,
     this.child,
-  }) : super(key: key);
+  });
 
   final Widget? child;
 

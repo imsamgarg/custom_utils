@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class CustomFutureBuilder<T> extends StatelessWidget {
   const CustomFutureBuilder({
-    Key? key,
+    super.key,
     required this.future,
     required this.builder,
     required this.errorBuilder,
     required this.loading,
     this.initialData,
-  }) : super(key: key);
+  });
 
   final T? initialData;
   final Future<T> future;

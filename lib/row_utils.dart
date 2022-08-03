@@ -4,10 +4,10 @@ class RowExpanded extends StatelessWidget {
   late final List<Widget> _children;
 
   RowExpanded({
-    Key? key,
+    super.key,
     required List<Widget> children,
     List<int>? flex,
-  }) : super(key: key) {
+  }) {
     assert(
       children.length == flex?.length || flex == null,
       "length of children and flex must be same",
@@ -16,8 +16,8 @@ class RowExpanded extends StatelessWidget {
     int index = 0;
     children = children.map((e) {
       return Expanded(
-        child: e,
         flex: index++,
+        child: e,
       );
     }).toList(growable: false);
   }
@@ -33,11 +33,10 @@ class RowExpanded extends StatelessWidget {
 class RowCentered extends Column {
   RowCentered(
     List<Widget> children, {
-    MainAxisSize mainAxisSize = MainAxisSize.max,
+    super.mainAxisSize,
   }) : super(
           children: children,
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: mainAxisSize,
         );
 }
