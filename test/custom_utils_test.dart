@@ -1,11 +1,16 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('adds one to input values', () {
-    // final calculator = Calculator();
-    assert(1 == 2);
-    // expect(calculator.addOne(2), 3);
-    // expect(calculator.addOne(-7), -6);
-    // expect(calculator.addOne(0), 1);
+  testWidgets('test', (WidgetTester tester) async {
+    // await tester.pumpWidget(Container());
+    // await tester.pumpWidget(nil);
+    await tester.pumpWidget(const SizedBox());
+    final Stopwatch timer = Stopwatch()..start();
+    for (int index = 0; index < 500000; index += 1) {
+      await tester.pump();
+    }
+    timer.stop();
+    debugPrint('Time taken: ${timer.elapsedMilliseconds}ms');
   });
 }
